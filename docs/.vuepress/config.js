@@ -77,7 +77,18 @@ module.exports = {
               text: '_.chunk',
               link: '/post/array_/chunk.md'
               // children:['/post/array_/chunk.md']
-            }
+            },
+            {
+              text: '_.compact',
+              link: '/post/array_/compact.md'
+              // children:['/post/array_/chunk.md']
+            },
+            {
+              text: '_.concat',
+              link: '/post/array_/concat.md'
+              // children:['/post/array_/chunk.md']
+            },
+
             // '/post/array_/chunk.md'
           ]
         },
@@ -89,7 +100,12 @@ module.exports = {
         {
           text: '函数',
           collapsible: true,
-          children: ['/demo2/22.md']
+          children: [
+            {
+              text: '_.once',
+              link: '/post/function_/once.md'
+            },
+          ]
         },
         {
           text: '语言',
