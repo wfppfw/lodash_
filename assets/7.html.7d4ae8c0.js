@@ -1,0 +1,2 @@
+const data = JSON.parse('{"key":"v-8c104572","path":"/post/test2/7.html","title":"7","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[{"level":2,"title":"test1","slug":"test1","children":[]},{"level":2,"title":"test2","slug":"test2","children":[]},{"level":2,"title":"test3","slug":"test3","children":[]},{"level":2,"title":"test4","slug":"test4","children":[]}],"git":{"updatedTime":1656311137000,"contributors":[{"name":"wfppfw","email":"wfppfw12138@gmail","commits":1}]},"filePathRelative":"post/test2/7.md"}');
+export { data };
