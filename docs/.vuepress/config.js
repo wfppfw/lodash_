@@ -88,6 +88,36 @@ module.exports = {
               link: '/post/array_/concat.md'
               // children:['/post/array_/chunk.md']
             },
+            {
+              text: '_.fill',
+              link: '/post/array_/fill.md'
+              // children:['/post/array_/chunk.md']
+            },
+            {
+              text: '_.head',
+              link: '/post/array_/head.md'
+              // children:['/post/array_/chunk.md']
+            },
+            {
+              text: '_.initial',
+              link: '/post/array_/initial.md'
+              // children:['/post/array_/chunk.md']
+            },
+            {
+              text: '_.last',
+              link: '/post/array_/last.md'
+              // children:['/post/array_/chunk.md']
+            },
+            {
+              text: '_.reverse',
+              link: '/post/array_/reverse.md'
+              // children:['/post/array_/chunk.md']
+            },
+            {
+              text: '_.nth',
+              link: '/post/array_/nth.md'
+              // children:['/post/array_/chunk.md']
+            },
 
             // '/post/array_/chunk.md'
           ]
@@ -95,7 +125,16 @@ module.exports = {
         {
           text: '集合',
           collapsible: true,
-          children: ['/demo2/22.md']
+          children: [       
+            {
+            text: '_.size',
+            link: '/post/collection_/size.md'
+          },
+          {
+            text: '_.sample',
+            link: '/post/collection_/sample.md'
+          },
+        ]
         },
         {
           text: '函数',
@@ -105,12 +144,29 @@ module.exports = {
               text: '_.once',
               link: '/post/function_/once.md'
             },
+            {
+              text: '_.delay',
+              link: '/post/function_/delay.md'
+            },
           ]
         },
         {
           text: '语言',
           collapsible: true,
-          children: ['/demo2/22.md']
+          children: [
+            {
+              text: '_.eq',
+              link: '/post/languaue_/eq.md'
+            },
+            {
+              text: '_.isArray',
+              link: '/post/languaue_/isArray.md'
+            },
+            {
+              text: '_.isBoolean',
+              link: '/post/languaue_/isBoolean.md'
+            },
+          ]
         },
         {
           text: '数学',
