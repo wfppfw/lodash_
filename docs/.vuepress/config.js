@@ -118,6 +118,11 @@ module.exports = {
               link: '/post/array_/nth.md'
               // children:['/post/array_/chunk.md']
             },
+            {
+              text: '_.pull',
+              link: '/post/array_/pull.md'
+              // children:['/post/array_/chunk.md']
+            },
 
             // '/post/array_/chunk.md'
           ]
@@ -191,7 +196,11 @@ module.exports = {
         {
           text: '实用函数',
           collapsible: true,
-          children: ['/demo2/22.md']
+          children: [          
+            {
+            text: '_.noop',
+            link: '/post/useFunc_/noop.md'
+          },]
         },
         {
           text: 'Properties',
