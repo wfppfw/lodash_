@@ -176,7 +176,12 @@ module.exports = {
         {
           text: '数学',
           collapsible: true,
-          children: ['/demo2/22.md']
+          children: [          
+              {
+            text: '_.add',
+            link: '/post/math_/add.md'
+          },
+]
         },
         {
           text: '对象',
@@ -191,7 +196,16 @@ module.exports = {
         {
           text: '字符串',
           collapsible: true,
-          children: ['/demo2/22.md']
+          children: [
+            {
+              text: '_.capitalize',
+              link: '/post/string_/capitalize.md'
+            },
+            {
+              text: '_.repeat',
+              link: '/post/string_/repeat.md'
+            },
+          ]
         },
         {
           text: '实用函数',
