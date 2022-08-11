@@ -153,6 +153,10 @@ module.exports = {
               text: '_.delay',
               link: '/post/function_/delay.md'
             },
+            {
+              text: '_.defer',
+              link: '/post/function_/defer.md'
+            },
           ]
         },
         {
@@ -180,6 +184,10 @@ module.exports = {
               {
             text: '_.add',
             link: '/post/math_/add.md'
+          },
+          {
+            text: '_.inRange',
+            link: '/post/math_/inRange.md'
           },
 ]
         },
