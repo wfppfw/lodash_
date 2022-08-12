@@ -222,7 +222,16 @@ module.exports = {
             {
             text: '_.noop',
             link: '/post/useFunc_/noop.md'
-          },]
+          },
+          {
+            text: '_.constant',
+            link: '/post/useFunc_/constant.md'
+          },
+          {
+            text: '_.defaultTo',
+            link: '/post/useFunc_/defaultTo.md'
+          }
+        ]
         },
         {
           text: 'Properties',
