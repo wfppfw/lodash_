@@ -1,72 +1,82 @@
-const { defaultTheme } = require('@vuepress/theme-default')
-const { searchPlugin } = require('@vuepress/plugin-search')
-const { prismjsPlugin } = require('@vuepress/plugin-prismjs')
-const { mediumZoomPlugin } = require('@vuepress/plugin-medium-zoom')
-const { docsearchPlugin } = require('@vuepress/plugin-docsearch')
-const { externalLinkIconPlugin } = require('@vuepress/plugin-external-link-icon')
+const { defaultTheme } = require('@vuepress/theme-default');
+const { searchPlugin } = require('@vuepress/plugin-search');
+const { prismjsPlugin } = require('@vuepress/plugin-prismjs');
+const { mediumZoomPlugin } = require('@vuepress/plugin-medium-zoom');
+const { docsearchPlugin } = require('@vuepress/plugin-docsearch');
+const {
+  externalLinkIconPlugin,
+} = require('@vuepress/plugin-external-link-icon');
 
 module.exports = {
-    // 站点语言
-    lang: 'zh-CN',
-    //站点标题
-    title: 'Lodash学习！',
-    // 部署站点的基础路径
-    base:'/lodash_/',
-    description: '我的lodash学习文档',
-    // 渲染在 HTML 的 <head> 标签内加入的额外标签
-    head: [
-        //站点favicon,图片资源在publi下
-        // https://v2.vuepress.vuejs.org/zh/guide/assets.html#public-%E6%96%87%E4%BB%B6
-        ['link', { rel: 'icon', href: '/images/logo/lodash.ico' }],
-        //重定向
-        [
-          'script', {}, `
+  // 站点语言
+  lang: 'zh-CN',
+  //站点标题
+  title: 'Lodash学习！',
+  // 部署站点的基础路径
+  base: '/lodash_/',
+  description: '我的lodash学习文档',
+  // 渲染在 HTML 的 <head> 标签内加入的额外标签
+  head: [
+    //站点favicon,图片资源在publi下
+    // https://v2.vuepress.vuejs.org/zh/guide/assets.html#public-%E6%96%87%E4%BB%B6
+    ['link', { rel: 'icon', href: '/images/logo/lodash.ico' }],
+    //重定向
+    [
+      'script',
+      {},
+      `
           (function() {
  
           })();
-          `
-        ]
+          `,
     ],
-    debug: true,
-    //默认主题
-    theme: defaultTheme({
-        // 导航栏中 Logo 的链接 
-        home:'/post/synopsis.md',
-        logo:'../images/logo/logo.png',
-        //首部导航栏
-        navbar: [
-          // 嵌套 Group - 最大深度为 2
+  ],
+  debug: true,
+  //默认主题
+  theme: defaultTheme({
+    // 导航栏中 Logo 的链接
+    home: '/post/synopsis.md',
+    logo: '../images/logo/logo.png',
+    //首部导航栏
+    navbar: [
+      // 嵌套 Group - 最大深度为 2
+      {
+        text: '其他资源',
+        children: [
           {
-            text: '其他资源',
+            text: 'SubGroup',
             children: [
-              {
-                text: 'SubGroup',
-                children: ['/group/sub/foo.md', '/group/sub/bar.md','/group/sub/bar.md','/group/sub/bar.md','/group/sub/bar.md',],
-              },
+              '/group/sub/foo.md',
+              '/group/sub/bar.md',
+              '/group/sub/bar.md',
+              '/group/sub/bar.md',
+              '/group/sub/bar.md',
             ],
           },
-          {
-            text: 'lodash中文文档',
-            link: 'https://www.lodashjs.com/'
-          },
-          {
-            text: 'Moon的小窝',
-            link: 'https://wfppfw.github.io/myVuePress/'
-          },
-          {
-            text: 'GitHub',
-            link: 'https://github.com/wfppfw'
-          },
         ],
+      },
+      {
+        text: 'lodash中文文档',
+        link: 'https://www.lodashjs.com/',
+      },
+      {
+        text: 'Moon的小窝',
+        link: 'https://wfppfw.github.io/myVuePress/',
+      },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/wfppfw',
+      },
+    ],
     // 侧边栏数组
     // 所有页面会使用相同的侧边栏，文档目录结构。
     sidebar: {
-      '/post/':[
+      '/post/': [
         // '/post/test/3.md synopsis',
         {
           text: '简介',
           // link:''
-          link: '/post/synopsis.md'
+          link: '/post/synopsis.md',
           // children:['/post/array_/chunk.md']
         },
         {
@@ -75,71 +85,75 @@ module.exports = {
           children: [
             {
               text: '_.chunk',
-              link: '/post/array_/chunk.md'
+              link: '/post/array_/chunk.md',
               // children:['/post/array_/chunk.md']
             },
             {
               text: '_.compact',
-              link: '/post/array_/compact.md'
+              link: '/post/array_/compact.md',
               // children:['/post/array_/chunk.md']
             },
             {
               text: '_.concat',
-              link: '/post/array_/concat.md'
+              link: '/post/array_/concat.md',
               // children:['/post/array_/chunk.md']
             },
             {
               text: '_.fill',
-              link: '/post/array_/fill.md'
+              link: '/post/array_/fill.md',
               // children:['/post/array_/chunk.md']
             },
             {
               text: '_.head',
-              link: '/post/array_/head.md'
+              link: '/post/array_/head.md',
               // children:['/post/array_/chunk.md']
             },
             {
               text: '_.initial',
-              link: '/post/array_/initial.md'
+              link: '/post/array_/initial.md',
               // children:['/post/array_/chunk.md']
             },
             {
               text: '_.last',
-              link: '/post/array_/last.md'
+              link: '/post/array_/last.md',
               // children:['/post/array_/chunk.md']
             },
             {
               text: '_.reverse',
-              link: '/post/array_/reverse.md'
+              link: '/post/array_/reverse.md',
               // children:['/post/array_/chunk.md']
             },
             {
               text: '_.nth',
-              link: '/post/array_/nth.md'
+              link: '/post/array_/nth.md',
               // children:['/post/array_/chunk.md']
             },
             {
               text: '_.pull',
-              link: '/post/array_/pull.md'
+              link: '/post/array_/pull.md',
               // children:['/post/array_/chunk.md']
+            },
+            {
+              text: '_.tail',
+              link: '/post/array_/tail.md',
             },
 
             // '/post/array_/chunk.md'
-          ]
+          ],
         },
         {
           text: '集合',
           collapsible: true,
-          children: [       
+          children: [
             {
-            text: '_.size',
-            link: '/post/collection_/size.md'
-          },
-          {
-            text: '_.sample',
-            link: '/post/collection_/sample.md'
-          },
-        ]
+              text: '_.size',
+              link: '/post/collection_/size.md',
+            },
+            {
+              text: '_.sample',
+              link: '/post/collection_/sample.md',
+            },
+          ],
         },
         {
           text: '函数',
@@ -147,17 +161,17 @@ module.exports = {
           children: [
             {
               text: '_.once',
-              link: '/post/function_/once.md'
+              link: '/post/function_/once.md',
             },
             {
               text: '_.delay',
-              link: '/post/function_/delay.md'
+              link: '/post/function_/delay.md',
             },
             {
               text: '_.defer',
-              link: '/post/function_/defer.md'
+              link: '/post/function_/defer.md',
             },
-          ]
+          ],
         },
         {
           text: '语言',
@@ -165,41 +179,41 @@ module.exports = {
           children: [
             {
               text: '_.eq',
-              link: '/post/languaue_/eq.md'
+              link: '/post/languaue_/eq.md',
             },
             {
               text: '_.isArray',
-              link: '/post/languaue_/isArray.md'
+              link: '/post/languaue_/isArray.md',
             },
             {
               text: '_.isBoolean',
-              link: '/post/languaue_/isBoolean.md'
+              link: '/post/languaue_/isBoolean.md',
             },
-          ]
+          ],
         },
         {
           text: '数学',
           collapsible: true,
-          children: [          
-              {
-            text: '_.add',
-            link: '/post/math_/add.md'
-          },
-          {
-            text: '_.inRange',
-            link: '/post/math_/inRange.md'
-          },
-]
+          children: [
+            {
+              text: '_.add',
+              link: '/post/math_/add.md',
+            },
+            {
+              text: '_.inRange',
+              link: '/post/math_/inRange.md',
+            },
+          ],
         },
         {
           text: '对象',
           collapsible: true,
-          children: ['/demo2/22.md']
+          children: ['/demo2/22.md'],
         },
         {
           text: 'Seq',
           collapsible: true,
-          children: ['/demo2/22.md']
+          children: ['/demo2/22.md'],
         },
         {
           text: '字符串',
@@ -207,42 +221,42 @@ module.exports = {
           children: [
             {
               text: '_.capitalize',
-              link: '/post/string_/capitalize.md'
+              link: '/post/string_/capitalize.md',
             },
             {
               text: '_.repeat',
-              link: '/post/string_/repeat.md'
+              link: '/post/string_/repeat.md',
             },
-          ]
+          ],
         },
         {
           text: '实用函数',
           collapsible: true,
-          children: [          
+          children: [
             {
-            text: '_.noop',
-            link: '/post/useFunc_/noop.md'
-          },
-          {
-            text: '_.constant',
-            link: '/post/useFunc_/constant.md'
-          },
-          {
-            text: '_.defaultTo',
-            link: '/post/useFunc_/defaultTo.md'
-          }
-        ]
+              text: '_.noop',
+              link: '/post/useFunc_/noop.md',
+            },
+            {
+              text: '_.constant',
+              link: '/post/useFunc_/constant.md',
+            },
+            {
+              text: '_.defaultTo',
+              link: '/post/useFunc_/defaultTo.md',
+            },
+          ],
         },
         {
           text: 'Properties',
           collapsible: true,
-          children: ['/demo2/22.md']
+          children: ['/demo2/22.md'],
         },
         {
           text: 'Methods',
           collapsible: true,
-          children: ['/demo2/22.md']
-        }
+          children: ['/demo2/22.md'],
+        },
       ],
 
       // '/demo2/':[
@@ -257,7 +271,6 @@ module.exports = {
 
       // '/post/test/':[{
 
-      
       //   title: 'Group1',
       //   children:['/post/test/1.md','/post/test/2.md']
       // }
@@ -265,83 +278,81 @@ module.exports = {
       // '/post/test2/':[
       //   {
 
-      
       //     title: 'Group2',
       //     children:['/post/test2/9.md','/post/test2/8.md']
       //   }
       // ]
-        // SidebarItem
-        // {
-        //   text: '介绍',
-        //   link: '/',
-        //   collapsable: true, // 不折叠
-        //   children: [
-        //     // SidebarItem
-        //     {
-        //       text: 'github',
-           
-        //       link: 'https://github.com',
-        //       children: ['/post/test/1.md','/post/test/1.md'],
-        //     },
-        //     // 字符串 - 页面文件路径
-        //     {
-        //         text: 'github',
-               
-        //         link: '/post/test/1.md',
-        //         children: ['/post/test/1.md','/post/test/1.md'], 
-        //     },
-        //     {
-        //         text: 'github',
-                
-        //         link: '/post/test/1.md',
-        //         children: ['/post/test/1.md','/post/test/1.md'], 
-        //     },
-        //     {
-        //         text: 'github',
+      // SidebarItem
+      // {
+      //   text: '介绍',
+      //   link: '/',
+      //   collapsable: true, // 不折叠
+      //   children: [
+      //     // SidebarItem
+      //     {
+      //       text: 'github',
 
-        //         link: '/post/test/1.md',
-        //         children: ['/post/test/1.md','/post/test/1.md'], 
-        //     }
-        //   ],
-        // },
-        // // 字符串 - 页面文件路径
-        // // '/bar/README.md',
-        // {
-        //     text: '数组',
-        //     link: '/',
-        //     collapsable: true, // 不折叠
-        // },
-        // '/post/test/3.md',
-        // // '/post/test/1.md',
-        // '/post/test/2.md'
+      //       link: 'https://github.com',
+      //       children: ['/post/test/1.md','/post/test/1.md'],
+      //     },
+      //     // 字符串 - 页面文件路径
+      //     {
+      //         text: 'github',
+
+      //         link: '/post/test/1.md',
+      //         children: ['/post/test/1.md','/post/test/1.md'],
+      //     },
+      //     {
+      //         text: 'github',
+
+      //         link: '/post/test/1.md',
+      //         children: ['/post/test/1.md','/post/test/1.md'],
+      //     },
+      //     {
+      //         text: 'github',
+
+      //         link: '/post/test/1.md',
+      //         children: ['/post/test/1.md','/post/test/1.md'],
+      //     }
+      //   ],
+      // },
+      // // 字符串 - 页面文件路径
+      // // '/bar/README.md',
+      // {
+      //     text: '数组',
+      //     link: '/',
+      //     collapsable: true, // 不折叠
+      // },
+      // '/post/test/3.md',
+      // // '/post/test/1.md',
+      // '/post/test/2.md'
     },
+  }),
+  //footer
+  // footer: `
+  // &copy; <a href="https://github.com/wfppfw" target="_blank">Moon</a> 2022-?
+  // <br>
+  // Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a>
 
-      }),
-      //footer
-      // footer: `
-      // &copy; <a href="https://github.com/wfppfw" target="_blank">Moon</a> 2022-?
-      // <br>
-      // Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> 
+  // `,
+  //插件配置
+  plugins: [
+    //本地搜索
+    // searchPlugin({
+    //   // 配置项
+    // }),
+    //
+    docsearchPlugin({
+      // 配置项
+    }),
+    //图片放大
+    mediumZoomPlugin({
+      // 配置项
+    }),
 
-      // `,
-      //插件配置
-      plugins: [
-        //本地搜索
-        // searchPlugin({
-        //   // 配置项
-        // }),
-        //
-        docsearchPlugin({
-            // 配置项
-        }),
-        //图片放大
-        mediumZoomPlugin({
-            // 配置项
-        }),
-
-          //外链添加图标
-        externalLinkIconPlugin({
-            // 配置项
-        }),
-      ],
-  }
+    //外链添加图标
+    externalLinkIconPlugin({
+      // 配置项
+    }),
+  ],
+};
