@@ -137,6 +137,10 @@ module.exports = {
               text: '_.tail',
               link: '/post/array_/tail.md',
             },
+            {
+              text: '_.drop',
+              link: '/post/array_/drop.md',
+            },
 
             // '/post/array_/chunk.md'
           ],
