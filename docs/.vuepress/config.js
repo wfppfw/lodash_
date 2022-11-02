@@ -207,6 +207,10 @@ module.exports = {
               text: '_.inRange',
               link: '/post/math_/inRange.md',
             },
+            {
+              text: '_.mean',
+              link: '/post/math_/mean.md',
+            },
           ],
         },
         {
