@@ -211,6 +211,10 @@ module.exports = {
               text: '_.mean',
               link: '/post/math_/mean.md',
             },
+            {
+              text: '_.subtract',
+              link: '/post/math_/subtract.md',
+            },
           ],
         },
         {
