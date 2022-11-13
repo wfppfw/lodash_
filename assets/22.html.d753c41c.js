@@ -1,0 +1,2 @@
+const data = JSON.parse('{"key":"v-e2c72e40","path":"/demo2/22.html","title":"ascasc","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[{"level":2,"title":"csdcsdc","slug":"csdcsdc","children":[{"level":3,"title":"XSDCSDC","slug":"xsdcsdc","children":[]}]}],"git":{"updatedTime":1656311137000,"contributors":[{"name":"wfppfw","email":"wfppfw12138@gmail","commits":1}]},"filePathRelative":"demo2/22.md"}');
+export { data };
